@@ -1,0 +1,27 @@
+#spring:
+#  datasource:
+#    url:${MYSQL_CI_URL}
+#  username:${MYSQL_USER}
+#  password:${mYSQL_PASSWORD}
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#      show-sql:true
+
+#logging:
+#  file: logs/dev_app.log
+#  pattern:
+#    console: "%d %-5level %logger : %msg%n"
+#    file: "%d %-5level [%thread] %logger : %msg%n"
+#  level:
+#    org.springframework.web: DEBUG
+#    com.stackroute.MovieService.controller: DEBUG
+#    org.hibernate: DEBUG
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
